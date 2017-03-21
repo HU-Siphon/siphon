@@ -6,10 +6,14 @@
 
 <script>
   export default {
-    props: ['value'],
+    props: {
+      value: {
+        default: ''
+      }
+    },
     methods: {
       updateValue: function (value) {
-        this.$emit('input', value)
+        this.$emit('update', value)
       }
     }
   }

@@ -6,7 +6,6 @@ import App from './views/app.vue'
 import purecss from 'purecss'
 import grid from 'purecss/build/grids-responsive-min.css'
 import fontawesome from 'font-awesome/css/font-awesome.min.css'
-import fuse from 'fuse'
 
 Vue.config.productionTip = false
 
