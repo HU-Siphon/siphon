@@ -1,7 +1,7 @@
 <template>
-    <div class="search">
+    <div class="search-form">
         <input placeholder="Type to search" v-model:value="value" v-on:input="search">
-        <div v-for="result in results">
+        <div v-for="result in topResults">
             <result :name="result.name" :link="result.link"></result>
         </div>
     </div>
@@ -21,7 +21,7 @@
         results: [],
         options: {
           shouldSort: true,
-          threshold: 0.6,
+          threshold: 0.3,
           location: 0,
           distance: 100,
           maxPatternLength: 32,
@@ -453,6 +453,11 @@
         ]
       }
     },
+    computed: {
+      topResults: function () {
+        return this.results.slice(0, 10)
+      }
+    },
     methods: {
       search: function () {
         this.results = this.fuse.search(this.value)
@@ -465,11 +470,16 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    .search {
+    .search-form {
         width: 100%;
 
         input {
+            background-color: #000;
+            color: #fff;
             width: 100%;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
         }
     }
 </style>
