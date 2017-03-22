@@ -12,9 +12,6 @@
                             <router-link to="/">Home</router-link>
                         </li>
                         <li class="link">
-                            <a>Student</a>
-                        </li>
-                        <li class="link">
                             <router-link to="/login">Login</router-link>
                         </li>
                     </ul>
