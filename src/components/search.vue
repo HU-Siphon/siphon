@@ -1,6 +1,6 @@
 <template>
     <div class="search-form">
-        <input placeholder="Type to search" v-model:value="value" v-on:input="search">
+        <input placeholder="Type to search" v-model:value="value" @input="search">
         <div v-for="result in topResults">
             <result :name="result.name" :link="result.link"></result>
         </div>
@@ -469,7 +469,7 @@
   }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" scoped>
     .search-form {
         width: 100%;
 

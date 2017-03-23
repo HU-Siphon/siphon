@@ -41,7 +41,7 @@
   }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" scoped>
     .search {
         padding-top: 15px;
     }

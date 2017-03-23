@@ -17,7 +17,7 @@
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss">
     .result {
         padding: 10px 0;
     }

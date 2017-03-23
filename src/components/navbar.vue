@@ -21,7 +21,7 @@
     </nav>
 </template>
 
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss">
     .navbar {
         width: 100%;
         background-color: #000;
