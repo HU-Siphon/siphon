@@ -1,8 +1,10 @@
 <template>
     <div class="search-form">
         <input placeholder="Type to search" v-model:value="value" @input="search">
-        <div v-for="result in topResults">
-            <result :name="result.name" :link="result.link"></result>
+        <div class="results">
+            <div v-for="result in topResults">
+                <result :name="result.name" :link="result.link"></result>
+            </div>
         </div>
     </div>
 </template>
@@ -471,15 +473,20 @@
 
 <style lang="scss" scoped>
     .search-form {
-        width: 100%;
-
+        margin: 0 10%;
         input {
-            background-color: #000;
-            color: #fff;
+            color: #000;
             width: 100%;
-            padding: 10px;
-            border-radius: 25px;
+            box-sizing: border-box;
             border: none;
+            border-radius: 10px;
+            padding: 7.5px;
         }
+    }
+
+    .results {
+        margin-left: 5%;
+        position: absolute;
+        width: 70%;
     }
 </style>
