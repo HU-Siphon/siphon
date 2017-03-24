@@ -3,13 +3,20 @@ import VueResource from 'vue-resource'
 import router from './router'
 import App from './views/app.vue'
 
-/* eslint-disable no-unused-vars */
-import purecss from 'purecss'
-import grid from 'purecss/build/grids-responsive-min.css'
-import fontawesome from 'font-awesome/css/font-awesome.min.css'
+import WebFont from 'webfontloader'
+
+import 'purecss'
+import 'purecss/build/grids-responsive-min.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
+
+WebFont.load({
+  google: {
+    families: ['Gentium Basic', 'Open Sans']
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

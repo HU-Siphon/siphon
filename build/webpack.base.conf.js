@@ -28,6 +28,7 @@ module.exports = {
     plugins: [
         new FaviconsWebpackPlugin({
             logo: './src/assets/favicon.png',
+            prefix: 'icons/[hash]/',
             title: 'Siphon',
             background: '#ebb113',
             icons: {
