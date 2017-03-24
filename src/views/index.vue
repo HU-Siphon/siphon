@@ -15,9 +15,7 @@
                     </div>
                     <div>
                         <h1>Grades</h1>
-                        <ul>
-
-                        </ul>
+                        <classes></classes>
                     </div>
                 </div>
                 <div class="pure-u-1-3">
@@ -33,10 +31,12 @@
 <script>
   import navbar from '../components/navbar.vue'
   import search from '../components/search.vue'
+  import classes from '../components/classes.vue'
   export default {
     components: {
       navbar,
-      search
+      search,
+      classes
     }
   }
 </script>
