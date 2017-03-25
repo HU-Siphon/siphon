@@ -21,7 +21,6 @@
 <script>
     import sidebar from '../components/sidebar.vue'
     import titlebar from '../components/titlebar.vue'
-    /* eslint-disable */
     export default {
         components: {
             sidebar,
