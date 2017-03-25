@@ -16,6 +16,6 @@
     .app {
         min-height: 100vh;
         background: #3a6186;
-        background: linear-gradient(to left, #3a6186 , #89253e);
+        //background: linear-gradient(to left, #3a6186 , #89253e);
     }
 </style>

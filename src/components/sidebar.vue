@@ -70,17 +70,17 @@
     }
 
     .brand {
-        padding: 30px 0;
+        padding: 15px 0;
         font-size: 18px;
     }
 
     .compact {
-        padding: 30px 0;
+        padding: 15px 0;
         background-color: #36D7B7;
     }
 
     .search {
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
     .options {

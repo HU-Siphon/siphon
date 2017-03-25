@@ -485,8 +485,8 @@
     }
 
     .results {
-        margin-left: 5%;
+        margin-left: 1%;
         position: absolute;
-        width: 70%;
+        width: 77%;
     }
 </style>

@@ -16,7 +16,7 @@
 <style lang="scss" scoped>
     .item {
         background-color: #3A539B;
-        padding: 10px 0;
+        padding: 20px 0;
     }
 
     .item-inner {
