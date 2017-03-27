@@ -1,10 +1,10 @@
 <template>
     <div class="item">
         <div class="item-inner">
-            <h1 class="title">
+            <a href="" class="title">
                 <slot name="icon"></slot>
                 <slot name="title"></slot>
-            </h1>
+            </a>
         </div>
     </div>
 </template>
@@ -26,7 +26,9 @@
     .title {
         margin: 0;
         font-family: 'Lato', sans-serif;
-        font-weight: 800;
+        font-weight: 600;
         font-size: 22px;
+        text-decoration: none;
+        color: #fff;
     }
 </style>

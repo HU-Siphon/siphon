@@ -23,12 +23,12 @@
     .result {
         width: 100%;
         margin-top: 3px;
-        border-radius: 5px;
-        background-color: #6C7A89;
-        padding: 2px 0;
+        border-radius: 0;
+        padding: 3px 0;
+        background-color: lighten(#22313F, 10%);
 
         &:hover {
-            background-color: darken(#6C7A89, 10%);
+            background-color: lighten(#22313F, 15%);
         }
     }
 

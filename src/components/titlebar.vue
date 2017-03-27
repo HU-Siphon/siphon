@@ -20,5 +20,7 @@
 
     .title {
         margin: 0;
+        font-size: 22px;
+        font-weight: 400
     }
 </style>

@@ -19,14 +19,14 @@
 </template>
 
 <script>
-    import sidebar from '../components/sidebar.vue'
-    import titlebar from '../components/titlebar.vue'
-    export default {
-        components: {
-            sidebar,
-            titlebar
-        }
+  import sidebar from '../components/sidebar.vue'
+  import titlebar from '../components/titlebar.vue'
+  export default {
+    components: {
+      sidebar,
+      titlebar
     }
+  }
 </script>
 
 <style lang="scss" scoped>

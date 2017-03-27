@@ -5,18 +5,16 @@
                 <div class="pure-g">
                     <div class="pure-u-4-5 brand">
                         <i class="fa fa-graduation-cap"></i> Siphon
-
-
                     </div>
-                    <div class="pure-u-1-5 compact">
+                    <div class="pure-u-1-5 compact" @click="collapse">
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
             </div>
             <div class="pure-u-1 search">
-                <search></search>
+                <search @gainFocus="showSearch" @loseFocus="hideSearch"></search>
             </div>
-            <div class="pure-u-1">
+            <div class="pure-u-1" :class="{ itemshidden: search }">
                 <sidebaritem>
                     <span slot="title">Home</span>
                     <i class="fa fa-home fa-fw" slot="icon"></i>
@@ -34,7 +32,6 @@
                 <div class="pure-g">
                     <div class="pure-u-2-3 account">
                         Account
-
                     </div>
                     <div class="pure-u-1-3 settings">
                         <i class="fa fa-gear"></i>
@@ -52,6 +49,23 @@
     components: {
       search,
       sidebaritem
+    },
+    data: function () {
+      return {
+        search: false,
+        collapsed: false
+      }
+    },
+    methods: {
+      collapse: function () {
+        this.collapsed = !this.collapsed
+      },
+      showSearch: function () {
+        this.search = true
+      },
+      hideSearch: function () {
+        this.search = false
+      }
     }
   }
 </script>
@@ -99,5 +113,13 @@
     .settings {
         padding: 20px 0;
         background-color: #36D7B7;
+    }
+
+    .items {
+        display: block;
+    }
+
+    .itemshidden {
+        display: none;
     }
 </style>
