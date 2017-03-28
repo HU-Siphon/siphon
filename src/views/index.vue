@@ -12,18 +12,9 @@
                 </div>
 
                 <div slot="links">
-                    <sidebaritem>
-                        <span slot="title">Home</span>
-                        <i class="fa fa-home fa-fw" slot="icon"></i>
-                    </sidebaritem>
-                    <sidebaritem>
-                        <span slot="title">Personal</span>
-                        <i class="fa fa-user fa-fw" slot="icon"></i>
-                    </sidebaritem>
-                    <sidebaritem>
-                        <span slot="title">Student</span>
-                        <i class="fa fa-graduation-cap fa-fw" slot="icon"></i>
-                    </sidebaritem>
+                    <sidebaritem title="Home" icon="fa-home" :links="[{name:'test',link:''}]"></sidebaritem>
+                    <sidebaritem title="Personal" icon="fa-user"></sidebaritem>
+                    <sidebaritem title="Student" icon="fa-graduation-cap"></sidebaritem>
                 </div>
 
                 <div class="pure-g" slot="bottom">
@@ -41,7 +32,7 @@
             <div class="pure-u-4-5">
                 <div class="pure-g">
                     <div class="pure-u-1">
-                        <contentframe></contentframe>
+                        <contentframe :content="content"></contentframe>
                     </div>
                 </div>
             </div>
@@ -63,7 +54,12 @@
     },
     data: function () {
       return {
-        content: ''
+        content: 'https://pipeline.harding.edu/block/477'
+      }
+    },
+    methods: {
+      updateContent: {
+        //
       }
     }
   }

@@ -1,11 +1,18 @@
 <template>
 <div class="content">
-    <iframe src="https://pipeline.harding.edu/block/27"></iframe>
+    <iframe v-bind:src="content"></iframe>
 </div>
 </template>
 
 <script>
-
+    export default {
+      props: {
+        content: {
+          type: String,
+          required: true
+        }
+      }
+    }
 </script>
 
 <style lang="scss">
