@@ -1,7 +1,7 @@
 <template>
     <div class="search-form">
         <input placeholder="Type to search" v-model:value="value" @input="search" @focus="gainFocus" @blur="loseFocus">
-        <div class="results" v-if="focus" @mousedown="clickLink">
+        <div class="results" v-if="focus" @mousedown="focusLink">
             <div v-for="result in topResults">
                 <result :name="result.name" :link="result.link"></result>
             </div>
@@ -46,7 +46,7 @@
       }
     },
     methods: {
-      clickLink: function () {
+      focusLink: function () {
         this.clickedLink = true
       },
       search: function () {

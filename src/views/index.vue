@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="sidebar">
-            <sidebar>
+            <sidebar @clickLink="updateContent">
                 <div class="pure-g" slot="header">
                     <div class="pure-u-4-5 brand">
                         <i class="fa fa-university"></i> Siphon
@@ -58,8 +58,9 @@
       }
     },
     methods: {
-      updateContent: {
-        //
+      updateContent: function () {
+        console.log('hi')
+//        this.content = link
       }
     }
   }

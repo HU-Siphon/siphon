@@ -5,7 +5,7 @@
                 <slot name="header"></slot>
             </div>
             <div class="pure-u-1 search">
-                <search @gainFocus="showSearch" @loseFocus="hideSearch"></search>
+                <search @gainFocus="showSearch" @loseFocus="hideSearch" @clickLink="console.log('hi')"></search>
             </div>
             <div class="pure-u-1" v-if="!search">
                 <slot name="links"></slot>

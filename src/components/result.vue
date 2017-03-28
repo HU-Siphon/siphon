@@ -1,7 +1,7 @@
 <template>
     <div class="result">
         <div class="result-inner">
-            <a v-bind:href="link">{{ name }}</a>
+            <a v-on:click="clickLink">{{ name }}</a>
         </div>
     </div>
 </template>
@@ -15,11 +15,16 @@
       link: {
         default: 'link'
       }
+    },
+    methods: {
+      clickLink: function () {
+        this.$emit('clickLink')
+      }
     }
   }
 </script>
 
-<style lang="scss" scoped="">
+<style lang="scss" scoped>
     .result {
         width: 100%;
         margin-top: 3px;
