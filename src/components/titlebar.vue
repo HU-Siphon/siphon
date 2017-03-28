@@ -12,10 +12,12 @@
 
 <style lang="scss" scoped>
     .titlebar {
-        padding: 10px 0;
+        padding: 12.5px 0;
         background-color: #22313F;
         text-align: center;
         color: #fff;
+        position: fixed;
+        width: 80%;
     }
 
     .title {

@@ -2,41 +2,16 @@
     <nav class="sidebar">
         <div class="pure-g">
             <div class="pure-u-1 header">
-                <div class="pure-g">
-                    <div class="pure-u-4-5 brand">
-                        <i class="fa fa-graduation-cap"></i> Siphon
-                    </div>
-                    <div class="pure-u-1-5 compact" @click="collapse">
-                        <i class="fa fa-arrow-left"></i>
-                    </div>
-                </div>
+                <slot name="header"></slot>
             </div>
             <div class="pure-u-1 search">
                 <search @gainFocus="showSearch" @loseFocus="hideSearch"></search>
             </div>
-            <div class="pure-u-1" :class="{ itemshidden: search }">
-                <sidebaritem>
-                    <span slot="title">Home</span>
-                    <i class="fa fa-home fa-fw" slot="icon"></i>
-                </sidebaritem>
-                <sidebaritem>
-                    <span slot="title">Student</span>
-                    <i class="fa fa-user fa-fw" slot="icon"></i>
-                </sidebaritem>
-                <sidebaritem>
-                    <span slot="title">Registration</span>
-                    <i class="fa fa-check fa-fw" slot="icon"></i>
-                </sidebaritem>
+            <div class="pure-u-1" v-if="!search">
+                <slot name="links"></slot>
             </div>
-            <div class="pure-u-1 options">
-                <div class="pure-g">
-                    <div class="pure-u-2-3 account">
-                        Account
-                    </div>
-                    <div class="pure-u-1-3 settings">
-                        <i class="fa fa-gear"></i>
-                    </div>
-                </div>
+            <div class="pure-u-1 bottom">
+                <slot name="bottom"></slot>
             </div>
         </div>
     </nav>
@@ -44,11 +19,9 @@
 
 <script>
   import search from '../components/search.vue'
-  import sidebaritem from './sidebaritem.vue'
   export default {
     components: {
-      search,
-      sidebaritem
+      search
     },
     data: function () {
       return {
@@ -97,7 +70,7 @@
         margin: 30px 0;
     }
 
-    .options {
+    .bottom {
         font-size: 22px;
         text-align: center;
         position: absolute;
@@ -113,13 +86,5 @@
     .settings {
         padding: 20px 0;
         background-color: #36D7B7;
-    }
-
-    .items {
-        display: block;
-    }
-
-    .itemshidden {
-        display: none;
     }
 </style>
