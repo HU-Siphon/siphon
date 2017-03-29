@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="sidebar">
-            <sidebar @clickLink="updateContent">
+            <sidebar>
                 <div class="pure-g" slot="header">
                     <div class="pure-u-4-5 brand">
                         <i class="fa fa-university"></i> Siphon
@@ -32,7 +32,7 @@
             <div class="pure-u-4-5">
                 <div class="pure-g">
                     <div class="pure-u-1">
-                        <contentframe :content="content"></contentframe>
+                        <contentframe></contentframe>
                     </div>
                 </div>
             </div>
@@ -51,17 +51,6 @@
       titlebar,
       contentframe,
       sidebaritem
-    },
-    data: function () {
-      return {
-        content: 'https://pipeline.harding.edu/block/477'
-      }
-    },
-    methods: {
-      updateContent: function () {
-        console.log('hi')
-//        this.content = link
-      }
     }
   }
 </script>

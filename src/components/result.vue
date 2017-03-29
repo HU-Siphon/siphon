@@ -18,7 +18,7 @@
     },
     methods: {
       clickLink: function () {
-        this.$emit('clickLink')
+        this.$store.commit('updateContent', this.link)
       }
     }
   }

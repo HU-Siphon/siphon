@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import router from './router'
+import store from './store'
+import { sync } from 'vuex-router-sync'
 import App from './views/app.vue'
 
 import WebFont from 'webfontloader'
@@ -12,6 +14,8 @@ import 'font-awesome/css/font-awesome.min.css'
 Vue.config.productionTip = false
 Vue.use(VueResource)
 
+sync(store.store, router)
+
 WebFont.load({
   google: {
     families: ['Gentium Basic', 'Open Sans']
@@ -21,5 +25,6 @@ WebFont.load({
 /* eslint-disable no-new */
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

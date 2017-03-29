@@ -1,18 +1,17 @@
 <template>
-<div class="content">
-    <iframe v-bind:src="content"></iframe>
-</div>
+    <div class="content">
+        <iframe v-bind:src="content"></iframe>
+    </div>
 </template>
 
 <script>
-    export default {
-      props: {
-        content: {
-          type: String,
-          required: true
-        }
+  export default {
+    computed: {
+      content () {
+        return this.$store.state.content
       }
     }
+  }
 </script>
 
 <style lang="scss">
