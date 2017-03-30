@@ -1,8 +1,15 @@
 <template>
-    <nav class="sidebar">
+    <nav class="sidebar" :class="{ sidebarShown : collapsed }">
         <div class="pure-g">
             <div class="pure-u-1 header">
-                <slot name="header"></slot>
+                <div class="pure-g">
+                    <div class="pure-u-4-5 brand">
+                        <i class="fa fa-fw" :class="icon"></i> Siphon
+                    </div>
+                    <div class="pure-u-1-5 compact" v-on:click="collapse">
+                        <i class="fa fa-arrow-left compact-icon"></i>
+                    </div>
+                </div>
             </div>
             <div class="pure-u-1 search">
                 <search @gainFocus="showSearch" @loseFocus="hideSearch" @clickLink="console.log('hi')"></search>
@@ -22,6 +29,16 @@
   export default {
     components: {
       search
+    },
+    props: {
+      title: {
+        type: String,
+        required: true
+      },
+      icon: {
+        type: String,
+        required: true
+      }
     },
     data: function () {
       return {
@@ -45,6 +62,21 @@
 
 <style lang="scss" scoped>
     .sidebar {
+        width: 20%;
+    }
+
+    @media screen and (max-width: 48em) {
+        .sidebar {
+            right: 100%;
+            width: 80% !important;
+        }
+
+        .sidebarShown {
+            left: 0;
+        }
+    }
+
+    .sidebar {
         background-color: #22313F;
         height: 100vh;
         color: #fff;
@@ -62,8 +94,18 @@
     }
 
     .compact {
-        padding: 15px 0;
         background-color: #36D7B7;
+    }
+
+    @media screen and (max-width: 48em) {
+        .compact {
+            position: relative;
+            left: 20%;
+        }
+    }
+
+    .compact-icon {
+        padding: 15px 0;
     }
 
     .search {

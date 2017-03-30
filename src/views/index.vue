@@ -1,17 +1,7 @@
 <template>
     <div>
         <div class="sidebar">
-            <toggle></toggle>
-            <sidebar>
-                <div class="pure-g" slot="header">
-                    <div class="pure-u-4-5 brand">
-                        <i class="fa fa-university"></i> Siphon
-                    </div>
-                    <div class="pure-u-1-5 compact">
-                        <i class="fa fa-arrow-left"></i>
-                    </div>
-                </div>
-
+            <sidebar title="Siphon" icon="fa-university">
                 <div slot="links">
                     <sidebaritem title="Home" icon="fa-home" :links="this.homeLinks"></sidebaritem>
                     <sidebaritem title="Personal" icon="fa-user" :links="this.personalLinks"></sidebaritem>
@@ -70,14 +60,5 @@
 </script>
 
 <style lang="scss" scoped>
-    .sidebar {
-        width: 20%;
-    }
 
-    @media screen and (max-width: 48em) {
-        .sidebar {
-            right: 100%;
-            width: 80% !important;
-        }
-    }
 </style>
