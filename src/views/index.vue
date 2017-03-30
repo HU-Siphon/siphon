@@ -6,6 +6,7 @@
                     <sidebaritem title="Home" icon="fa-home" :links="this.homeLinks"></sidebaritem>
                     <sidebaritem title="Personal" icon="fa-user" :links="this.personalLinks"></sidebaritem>
                     <sidebaritem title="Student" icon="fa-graduation-cap" :links="this.studentLinks"></sidebaritem>
+                    <sidebaritem title="Finance" icon="fa-dollar" :links="this.financeLinks"></sidebaritem>
                 </div>
 
                 <div class="pure-g" slot="bottom">
@@ -45,15 +46,43 @@
     },
     data: function () {
       return {
-        homeLinks: {
-
-        },
-        personalLinks: {
-
-        },
-        studentLinks: {
-
-        }
+        homeLinks: [
+          //
+        ],
+        personalLinks: [
+          {
+            name: '',
+            link: ''
+          }
+        ],
+        studentLinks: [
+          {
+            name: 'Chapel',
+            link: 'https://pipeline.harding.edu/block/592'
+          },
+          {
+            name: '',
+            link: ''
+          },
+          {
+            name: '',
+            link: ''
+          },
+          {
+            name: '',
+            link: ''
+          },
+          {
+            name: '',
+            link: ''
+          }
+        ],
+        financeLinks: [
+          {
+            name: 'Account Summary',
+            link: 'https://pipeline.harding.edu/block/75'
+          }
+        ]
       }
     }
   }

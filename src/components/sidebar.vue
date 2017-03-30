@@ -1,20 +1,21 @@
 <template>
-    <nav class="sidebar" :class="{ sidebarShown : collapsed }">
+    <nav class="sidebar" :class="{ sidebarShown : !isSidebarCollapsed }">
         <div class="pure-g">
             <div class="pure-u-1 header">
                 <div class="pure-g">
-                    <div class="pure-u-4-5 brand">
-                        <i class="fa fa-fw" :class="icon"></i> Siphon
+                    <div class="pure-u-1 pure-u-md-4-5 brand">
+                        <i class="fa fa-fw" :class="icon"></i> {{ title }}
                     </div>
-                    <div class="pure-u-1-5 compact" v-on:click="collapse">
-                        <i class="fa fa-arrow-left compact-icon"></i>
+                    <div class="pure-u-1 pure-u-md-1-5 compact" v-on:click="collapse">
+                        <i class="fa fa-fw fa-bars compact-icon"></i>
                     </div>
                 </div>
             </div>
             <div class="pure-u-1 search">
-                <search @gainFocus="showSearch" @loseFocus="hideSearch" @clickLink="console.log('hi')"></search>
+                <search @gainFocus="showSearch" @loseFocus="hideSearch" v-if="!isSidebarCollapsed"></search>
+                <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="isSidebarCollapsed = false"></i>
             </div>
-            <div class="pure-u-1" v-if="!search">
+            <div class="pure-u-1" v-if="!isSearchActive">
                 <slot name="links"></slot>
             </div>
             <div class="pure-u-1 bottom">
@@ -42,19 +43,19 @@
     },
     data: function () {
       return {
-        search: false,
-        collapsed: false
+        isSearchActive: false,
+        isSidebarCollapsed: false
       }
     },
     methods: {
       collapse: function () {
-        this.collapsed = !this.collapsed
+        this.isSidebarCollapsed = !this.isSidebarCollapsed
       },
       showSearch: function () {
-        this.search = true
+        this.isSearchActive = true
       },
       hideSearch: function () {
-        this.search = false
+        this.isSearchActive = false
       }
     }
   }
@@ -63,6 +64,10 @@
 <style lang="scss" scoped>
     .sidebar {
         width: 20%;
+    }
+
+    .sidebarShown {
+        width: 5%;
     }
 
     @media screen and (max-width: 48em) {
@@ -95,12 +100,14 @@
 
     .compact {
         background-color: #36D7B7;
+        position: relative;
     }
 
     @media screen and (max-width: 48em) {
         .compact {
-            position: relative;
-            left: 20%;
+            position: fixed;
+            width: 20%;
+            right: 0;
         }
     }
 
@@ -109,6 +116,7 @@
     }
 
     .search {
+        text-align: center;
         margin: 30px 0;
     }
 

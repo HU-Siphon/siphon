@@ -3,7 +3,7 @@
         <input placeholder="Type to search" v-model:value="value" @input="search" @focus="gainFocus" @blur="loseFocus">
         <div class="results" v-if="focus" @mousedown="focusLink">
             <div v-for="result in topResults">
-                <result :name="result.name" :link="result.link"></result>
+                <result :name="result.name" :link="result.link" :type="result.type"></result>
             </div>
         </div>
     </div>

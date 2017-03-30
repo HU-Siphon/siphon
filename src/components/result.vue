@@ -1,24 +1,13 @@
 <template>
     <div class="result">
         <div class="result-inner">
-            <a v-on:click="clickLink">{{ name }}</a>
+            <a v-on:click="clickLink" v-if="type === 'CONTENT'">{{ name }}</a>
+            <a :href="link" v-if="type === 'LINK'">{{ name }}</a>
         </div>
     </div>
 </template>
 
 <script>
-  const LINK_TYPE = {
-    OUTSIDE_CONTENT: {
-      value: 1
-    },
-    LOCAL_CONTENT: {
-      value: 2
-    },
-    LINK: {
-      value: 3
-    }
-  }
-
   export default {
     props: {
       name: {
@@ -30,7 +19,7 @@
         required: true
       },
       type: {
-        type: LINK_TYPE,
+        type: String,
         required: true
       }
     },
