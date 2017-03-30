@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="sidebar">
+            <toggle></toggle>
             <sidebar>
                 <div class="pure-g" slot="header">
                     <div class="pure-u-4-5 brand">
@@ -28,8 +29,8 @@
             </sidebar>
         </div>
         <div class="pure-g">
-            <div class="pure-u-1-5"></div>
-            <div class="pure-u-4-5">
+            <div class="pure-u-1 pure-u-md-1-5"></div>
+            <div class="pure-u-1 pure-u-md-4-5">
                 <div class="pure-g">
                     <div class="pure-u-1">
                         <contentframe></contentframe>
@@ -71,5 +72,12 @@
 <style lang="scss" scoped>
     .sidebar {
         width: 20%;
+    }
+
+    @media screen and (max-width: 48em) {
+        .sidebar {
+            right: 100%;
+            width: 80% !important;
+        }
     }
 </style>
