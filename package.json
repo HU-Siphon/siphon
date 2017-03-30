@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "prod": "npm run build && node index.js",
+    "start": "node index.js",
     "build": "node build/build.js",
     "test": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "autotrack": "^2.1.1",
