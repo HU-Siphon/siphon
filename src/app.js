@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
+import WebFont from 'webfontloader'
+
 import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
-import App from './views/app.vue'
 
-import WebFont from 'webfontloader'
+import App from './views/app.vue'
 
 import 'purecss'
 import 'purecss/build/grids-responsive-min.css'
@@ -14,7 +15,7 @@ import 'font-awesome/css/font-awesome.min.css'
 Vue.config.productionTip = false
 Vue.use(VueResource)
 
-sync(store.store, router)
+sync(store, router)
 
 WebFont.load({
   google: {

@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <iframe v-bind:src="content"></iframe>
+        <iframe v-bind:src="content" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
     </div>
 </template>
 

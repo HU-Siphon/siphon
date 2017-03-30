@@ -7,13 +7,31 @@
 </template>
 
 <script>
+  const LINK_TYPE = {
+    OUTSIDE_CONTENT: {
+      value: 1
+    },
+    LOCAL_CONTENT: {
+      value: 2
+    },
+    LINK: {
+      value: 3
+    }
+  }
+
   export default {
     props: {
       name: {
-        default: 'name'
+        type: String,
+        required: true
       },
       link: {
-        default: 'link'
+        type: String,
+        required: true
+      },
+      type: {
+        type: LINK_TYPE,
+        required: true
       }
     },
     methods: {

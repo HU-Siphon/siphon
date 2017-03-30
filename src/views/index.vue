@@ -12,9 +12,9 @@
                 </div>
 
                 <div slot="links">
-                    <sidebaritem title="Home" icon="fa-home" :links="[{name:'test',link:''}]"></sidebaritem>
-                    <sidebaritem title="Personal" icon="fa-user"></sidebaritem>
-                    <sidebaritem title="Student" icon="fa-graduation-cap"></sidebaritem>
+                    <sidebaritem title="Home" icon="fa-home" :links="this.homeLinks"></sidebaritem>
+                    <sidebaritem title="Personal" icon="fa-user" :links="this.personalLinks"></sidebaritem>
+                    <sidebaritem title="Student" icon="fa-graduation-cap" :links="this.studentLinks"></sidebaritem>
                 </div>
 
                 <div class="pure-g" slot="bottom">
@@ -51,6 +51,19 @@
       titlebar,
       contentframe,
       sidebaritem
+    },
+    data: function () {
+      return {
+        homeLinks: {
+
+        },
+        personalLinks: {
+
+        },
+        studentLinks: {
+
+        }
+      }
     }
   }
 </script>
