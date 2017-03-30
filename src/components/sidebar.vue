@@ -1,22 +1,23 @@
 <template>
-    <nav class="sidebar" :class="{ sidebarShown : !isSidebarCollapsed }">
+    <nav class="sidebar" :class="{ collapsed : isSidebarCollapsed }">
         <div class="pure-g">
             <div class="pure-u-1 header">
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-4-5 brand">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-5 compact" v-on:click="collapse">
+                    <div class="pure-u-1 pure-u-md-1-5 compact" v-on:click="toggle">
                         <i class="fa fa-fw fa-bars compact-icon"></i>
                     </div>
                 </div>
             </div>
             <div class="pure-u-1 search">
                 <search @gainFocus="showSearch" @loseFocus="hideSearch" v-if="!isSidebarCollapsed"></search>
-                <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="isSidebarCollapsed = false"></i>
+                <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="expand"></i>
             </div>
             <div class="pure-u-1" v-if="!isSearchActive">
-                <slot name="links"></slot>
+                <sidebaritem v-for="link in links" :key="link.title" :title="link.title" :icon="link.icon"
+                             :links="link.links" :isSidebarCollapsed="isSidebarCollapsed"></sidebaritem>
             </div>
             <div class="pure-u-1 bottom">
                 <slot name="bottom"></slot>
@@ -27,9 +28,11 @@
 
 <script>
   import search from '../components/search.vue'
+  import sidebaritem from '../components/sidebaritem.vue'
   export default {
     components: {
-      search
+      search,
+      sidebaritem
     },
     props: {
       title: {
@@ -39,6 +42,12 @@
       icon: {
         type: String,
         required: true
+      },
+      links: {
+        type: Array,
+        default: function () {
+          return [{}]
+        }
       }
     },
     data: function () {
@@ -48,8 +57,11 @@
       }
     },
     methods: {
-      collapse: function () {
+      toggle: function () {
         this.isSidebarCollapsed = !this.isSidebarCollapsed
+      },
+      expand: function () {
+        this.isSidebarCollapsed = false
       },
       showSearch: function () {
         this.isSearchActive = true
@@ -63,29 +75,27 @@
 
 <style lang="scss" scoped>
     .sidebar {
-        width: 20%;
-    }
-
-    .sidebarShown {
-        width: 5%;
-    }
-
-    @media screen and (max-width: 48em) {
-        .sidebar {
-            right: 100%;
-            width: 80% !important;
-        }
-
-        .sidebarShown {
-            left: 0;
-        }
-    }
-
-    .sidebar {
         background-color: #22313F;
         height: 100vh;
         color: #fff;
         position: fixed;
+        width: 20%;
+        transition: all .5s ease;
+    }
+
+    .collapsed {
+        width: 100px;
+    }
+
+    @media screen and (max-width: 48em) {
+        .sidebar {
+            left: 0;
+            width: 80%;
+        }
+
+        .collapsed {
+            left: -100%;
+        }
     }
 
     .header {

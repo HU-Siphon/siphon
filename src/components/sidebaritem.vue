@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="item" @click="toggleExpand">
-            <div class="item-inner">
-                <i class="fa fa-fw" :class="icon"></i><span v-if="!sidebarMinimized">{{ title }}</span>
+            <div class="item-inner" :class="{ itemCenter : isSidebarCollapsed }">
+                <i class="fa fa-fw" :class="icon"></i><span v-if="!isSidebarCollapsed">{{ title }}</span>
             </div>
         </div>
         <div class="item-expand" v-if="expanded">
             <ul class="item-list">
-                <li v-for="link in links"><a :href="link.link" class="item-link">{{ link.name }}</a></li>
+                <li class="item-list-item" v-for="link in links"><a :href="link.link" class="item-link">{{ link.name }}</a></li>
             </ul>
         </div>
     </div>
@@ -21,7 +21,7 @@
       }
     },
     props: {
-      sidebarMinimized: {
+      isSidebarCollapsed: {
         type: Boolean,
         default: function () {
           return false
@@ -70,6 +70,10 @@
         color: #fff;
     }
 
+    .itemCenter {
+        text-align: center;
+    }
+
     .item-expand {
         padding: 10px 0;
     }
@@ -77,6 +81,10 @@
     .item-list {
         list-style-type: none;
         margin: 0;
+    }
+
+    .item-list-item {
+        padding: 5px 0;
     }
 
     .item-link {

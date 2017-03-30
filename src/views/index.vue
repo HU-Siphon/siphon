@@ -1,14 +1,7 @@
 <template>
     <div>
         <div class="sidebar">
-            <sidebar title="Siphon" icon="fa-university">
-                <div slot="links">
-                    <sidebaritem title="Home" icon="fa-home" :links="this.homeLinks"></sidebaritem>
-                    <sidebaritem title="Personal" icon="fa-user" :links="this.personalLinks"></sidebaritem>
-                    <sidebaritem title="Student" icon="fa-graduation-cap" :links="this.studentLinks"></sidebaritem>
-                    <sidebaritem title="Finance" icon="fa-dollar" :links="this.financeLinks"></sidebaritem>
-                </div>
-
+            <sidebar title="Siphon" icon="fa-university" :links="sidebarLinks">
                 <div class="pure-g" slot="bottom">
                     <div class="pure-u-2-3 account">
                         Account
@@ -34,53 +27,66 @@
 
 <script>
   import sidebar from '../components/sidebar.vue'
-  import titlebar from '../components/titlebar.vue'
   import contentframe from '../components/contentframe.vue'
-  import sidebaritem from '../components/sidebaritem.vue'
   export default {
     components: {
       sidebar,
-      titlebar,
-      contentframe,
-      sidebaritem
+      contentframe
     },
     data: function () {
       return {
-        homeLinks: [
-          //
-        ],
-        personalLinks: [
+        sidebarLinks: [
           {
-            name: '',
-            link: ''
-          }
-        ],
-        studentLinks: [
-          {
-            name: 'Chapel',
-            link: 'https://pipeline.harding.edu/block/592'
+            title: 'Home',
+            icon: 'fa-home',
+            links: [
+              //
+            ]
           },
           {
-            name: '',
-            link: ''
+            title: 'Personal',
+            icon: 'fa-user',
+            links: [
+              {
+                name: 'Chapel',
+                link: 'https://pipeline.harding.edu/block/592'
+              },
+              {
+                name: 'Housing Status (Signout)',
+                link: ''
+              }
+            ]
           },
           {
-            name: '',
-            link: ''
+            title: 'Student',
+            icon: 'fa-graduation-cap',
+            links: [
+              {
+                name: 'Course Schedule/Enrollment',
+                link: ''
+              },
+              {
+                name: 'My Classes (Registration)',
+                link: ''
+              }
+            ]
           },
           {
-            name: '',
-            link: ''
+            title: 'Registration',
+            icon: 'fa-check',
+            links: [
+              //
+            ]
           },
           {
-            name: '',
-            link: ''
-          }
-        ],
-        financeLinks: [
-          {
-            name: 'Account Summary',
-            link: 'https://pipeline.harding.edu/block/75'
+            title: 'Finance',
+            icon: 'fa-money',
+            links: [
+              {
+                name: 'Account Summary',
+                link: 'https://pipeline.harding.edu/block/75'
+              }
+            ]
           }
         ]
       }
