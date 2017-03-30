@@ -8,7 +8,7 @@
     "dev": "node build/dev-server.js",
     "start": "node index.js",
     "build": "node build/build.js",
-    "test": "node build/build.js",
+    "test": "npm run lint && npm run build",
     "lint": "eslint --ext .js,.vue src",
     "postinstall": "npm run build"
   },
