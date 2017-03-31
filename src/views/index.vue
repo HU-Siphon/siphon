@@ -3,10 +3,7 @@
         <div class="sidebar">
             <sidebar title="Siphon" icon="fa-university" :links="sidebarLinks">
                 <div class="pure-g" slot="bottom">
-                    <div class="pure-u-2-3 account">
-                        Account
-                    </div>
-                    <div class="pure-u-1-3 settings">
+                    <div class="pure-u-1 settings">
                         <i class="fa fa-gear"></i>
                     </div>
                 </div>

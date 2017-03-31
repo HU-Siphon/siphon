@@ -19,4 +19,8 @@
         background: #3a6186;
         background: linear-gradient(to left, #3a6186 , #89253e);
     }
+
+    ._center {
+        text-align: center;
+    }
 </style>

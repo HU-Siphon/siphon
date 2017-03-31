@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     sidebarMinimized: false,
-    content: 'https://login.harding.edu/login?service=https%3A%2F%2Fpipeline.harding.edu%2Fstart-session&renew=false'
+    content: 'https://pipeline.harding.edu'
   },
   mutations: {
     updateContent (state, newContent) {

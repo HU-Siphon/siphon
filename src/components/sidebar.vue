@@ -1,12 +1,12 @@
 <template>
-    <nav class="sidebar" :class="{ collapsed : isSidebarCollapsed }">
+    <nav class="sidebar-nav" :class="{ collapsed : isSidebarCollapsed }">
         <div class="pure-g">
             <div class="pure-u-1 header">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-4-5 brand">
+                    <div class="pure-u-1 brand" :class="{ 'pure-u-md-4-5' : !isSidebarCollapsed }">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-5 compact" v-on:click="toggle">
+                    <div class="pure-u-1 compact" v-on:click="toggle" :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
                         <i class="fa fa-fw fa-bars compact-icon"></i>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
 
 <script>
   import search from '../components/search.vue'
-  import sidebaritem from '../components/sidebaritem.vue'
+  import sidebaritem from './sidebarlink.vue'
   export default {
     components: {
       search,
@@ -74,13 +74,16 @@
 </script>
 
 <style lang="scss" scoped>
-    .sidebar {
-        background-color: #22313F;
+    $sidebarBackground: #22313F;
+    $sidebarButtons: #36D7B7;
+
+    .sidebar-nav {
+        background-color: $sidebarBackground;
         height: 100vh;
         color: #fff;
         position: fixed;
         width: 20%;
-        transition: all .5s ease;
+        transition: left .5s ease;
     }
 
     .collapsed {
@@ -88,7 +91,7 @@
     }
 
     @media screen and (max-width: 48em) {
-        .sidebar {
+        .sidebar-nav {
             left: 0;
             width: 80%;
         }
@@ -109,8 +112,12 @@
     }
 
     .compact {
-        background-color: #36D7B7;
+        background-color: $sidebarButtons;
         position: relative;
+
+        &:hover {
+            background-color: darken($sidebarButtons, 10%);
+        }
     }
 
     @media screen and (max-width: 48em) {
@@ -138,13 +145,12 @@
         bottom: 0;
     }
 
-    .account {
-        padding: 20px 0;
-        background-color: #36D7B7;
-    }
-
     .settings {
         padding: 20px 0;
-        background-color: #36D7B7;
+        background-color: $sidebarButtons;
+
+        &:hover {
+            background-color: darken($sidebarButtons, 10%);
+        }
     }
 </style>
