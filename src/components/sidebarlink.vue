@@ -4,13 +4,17 @@
             <i class="fa fa-fw icon" :class="icon"></i><a v-if="!isSidebarCollapsed">{{ title }}</a>
         </div>
         <div class="link-list" v-if="areLinksShown">
-            <a v-for="link in links" :href="link.link" class="list-link">{{ link.name }}</a>
+            <applink class="list-link" v-for="link in links" :key="link.name" :name="link.name" :link="link.link" :type="link.type"></applink>
         </div>
     </div>
 </template>
 
 <script>
+  import applink from './applink.vue'
   export default {
+    components: {
+      applink
+    },
     data: function () {
       return {
         areLinksShown: false

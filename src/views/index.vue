@@ -46,11 +46,13 @@
             links: [
               {
                 name: 'Chapel',
-                link: 'https://pipeline.harding.edu/block/592'
+                link: 'https://pipeline.harding.edu/block/592',
+                type: 'CONTENT'
               },
               {
                 name: 'Housing Status (Signout)',
-                link: ''
+                link: 'https://pipeline.harding.edu/block/66',
+                type: 'CONTENT'
               }
             ]
           },
@@ -60,11 +62,13 @@
             links: [
               {
                 name: 'Course Schedule/Enrollment',
-                link: ''
+                link: 'https://pipeline.harding.edu/block/477',
+                type: 'CONTENT'
               },
               {
                 name: 'My Classes (Registration)',
-                link: ''
+                link: 'https://pipeline.harding.edu/block/410',
+                type: 'CONTENT'
               }
             ]
           },
@@ -81,7 +85,8 @@
             links: [
               {
                 name: 'Account Summary',
-                link: 'https://pipeline.harding.edu/block/75'
+                link: 'https://pipeline.harding.edu/block/75',
+                type: 'CONTENT'
               }
             ]
           }

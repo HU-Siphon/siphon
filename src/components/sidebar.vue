@@ -5,8 +5,10 @@
                 <div class="pure-g">
                     <div class="pure-u-1 brand" :class="{ 'pure-u-md-4-5' : !isSidebarCollapsed }">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
+
                     </div>
-                    <div class="pure-u-1 compact" v-on:click="toggle" :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
+                    <div class="pure-u-1 compact" v-on:click="toggle"
+                         :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
                         <i class="fa fa-fw fa-bars compact-icon"></i>
                     </div>
                 </div>
@@ -16,8 +18,8 @@
                 <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="expand"></i>
             </div>
             <div class="pure-u-1" v-if="!isSearchActive">
-                <sidebaritem v-for="link in links" :key="link.title" :title="link.title" :icon="link.icon"
-                             :links="link.links" :isSidebarCollapsed="isSidebarCollapsed"></sidebaritem>
+                <sidebarlink v-for="link in links" :key="link.title" :title="link.title" :icon="link.icon"
+                             :links="link.links" :isSidebarCollapsed="isSidebarCollapsed"></sidebarlink>
             </div>
             <div class="pure-u-1 bottom">
                 <slot name="bottom"></slot>
@@ -27,12 +29,12 @@
 </template>
 
 <script>
-  import search from '../components/search.vue'
-  import sidebaritem from './sidebarlink.vue'
+  import search from './search.vue'
+  import sidebarlink from './sidebarlink.vue'
   export default {
     components: {
       search,
-      sidebaritem
+      sidebarlink
     },
     props: {
       title: {
@@ -125,6 +127,11 @@
             position: fixed;
             width: 20%;
             right: 0;
+            opacity: .25;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 
