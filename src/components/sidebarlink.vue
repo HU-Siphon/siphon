@@ -1,14 +1,10 @@
 <template>
-    <div>
-        <div class="item" @click="toggleExpand">
-            <div class="item-inner" :class="{ itemCenter : isSidebarCollapsed }">
-                <i class="fa fa-fw" :class="icon"></i><span v-if="!isSidebarCollapsed">{{ title }}</span>
-            </div>
+    <div class="sidebar-link">
+        <div class="link-title" :class="{ '_center' : isSidebarCollapsed }" @click="toggleExpand">
+            <i class="fa fa-fw icon" :class="icon"></i><a v-if="!isSidebarCollapsed">{{ title }}</a>
         </div>
-        <div class="item-expand" v-if="expanded">
-            <ul class="item-list">
-                <li class="item-list-item" v-for="link in links"><a :href="link.link" class="item-link">{{ link.name }}</a></li>
-            </ul>
+        <div class="link-list" v-if="areLinksShown">
+            <a v-for="link in links" :href="link.link" class="list-link">{{ link.name }}</a>
         </div>
     </div>
 </template>
@@ -17,7 +13,7 @@
   export default {
     data: function () {
       return {
-        expanded: false
+        areLinksShown: false
       }
     },
     props: {
@@ -48,7 +44,7 @@
       toggleExpand: function () {
         this.$emit('expand')
         if (this.links.length > 0) {
-          this.expanded = !this.expanded
+          this.areLinksShown = !this.areLinksShown
         }
       }
     }
@@ -56,39 +52,37 @@
 </script>
 
 <style lang="scss" scoped>
-    .item {
-        background-color: #3A539B;
-        padding: 20px 0;
-    }
+    $titleBackground: #3A539B;
+    $linkBackground: rgba(255, 255, 255, .05);
 
-    .item-inner {
-        margin: 0 10%;
+    .link-title {
+        background-color: $titleBackground;
+        padding: 20px 10%;
         font-family: 'Lato', sans-serif;
         font-weight: 600;
         font-size: 22px;
         text-decoration: none;
         color: #fff;
+
+        > .icon {
+            margin-right: 6px;
+        }
+
+        &:hover {
+            background-color: darken($titleBackground, 5%);
+        }
     }
 
-    .itemCenter {
-        text-align: center;
-    }
-
-    .item-expand {
-        padding: 10px 0;
-    }
-
-    .item-list {
-        list-style-type: none;
-        margin: 0;
-    }
-
-    .item-list-item {
-        padding: 5px 0;
-    }
-
-    .item-link {
+    .list-link {
+        display: block;
+        padding: 7.5px 10px;
+        word-wrap: break-word;
         color: #fff;
         text-decoration: none;
+
+        &:hover {
+            background-color: $linkBackground;
+        }
     }
+
 </style>
