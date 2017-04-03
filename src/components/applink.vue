@@ -2,7 +2,7 @@
     <div class="app-link">
         <a :href="link" v-if="type === 'EXTERNAL'">{{ name }}</a>
         <a v-on:click="clickContentLink" v-if="type === 'CONTENT'">{{ name }}</a>
-        <router-link :to="link" v-if="type === 'ROUTER'"></router-link>
+        <router-link :to="link" v-if="type === 'ROUTER'">{{ name }}</router-link>
     </div>
 </template>
 
