@@ -380,6 +380,10 @@ export default {
       type: 'LINK'
     },
     {
+      name: 'Testing Lab',
+      link: 'https://misnet.harding.edu/testinglab/index.php'
+    },
+    {
       name: 'SafeConnect Dashboard',
       link: 'https://10.5.1.1:8443/dashboard.do',
       terms: [
@@ -437,5 +441,8 @@ export default {
       category: 'Misc',
       type: 'LINK'
     }
+  ],
+  betterLinks: [
+    //
   ]
 }

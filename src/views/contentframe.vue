@@ -14,7 +14,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     iframe {
         border: none;
         height: 100vh;

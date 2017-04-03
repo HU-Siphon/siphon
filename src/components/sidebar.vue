@@ -5,7 +5,6 @@
                 <div class="pure-g">
                     <div class="pure-u-1 brand" :class="{ 'pure-u-md-4-5' : !isSidebarCollapsed }">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
-
                     </div>
                     <div class="pure-u-1 compact" v-on:click="toggle"
                          :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
@@ -54,22 +53,26 @@
     },
     data: function () {
       return {
-        isSearchActive: false,
-        isSidebarCollapsed: false
+        isSearchActive: false
       }
     },
     methods: {
       toggle: function () {
-        this.isSidebarCollapsed = !this.isSidebarCollapsed
+        this.$store.commit('updateSidebarMinimized', !this.isSidebarCollapsed)
       },
       expand: function () {
-        this.isSidebarCollapsed = false
+        this.$store.commit('updateSidebarMinimized', false)
       },
       showSearch: function () {
         this.isSearchActive = true
       },
       hideSearch: function () {
         this.isSearchActive = false
+      }
+    },
+    computed: {
+      isSidebarCollapsed () {
+        return this.$store.state.sidebarMinimized
       }
     }
   }

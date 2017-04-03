@@ -11,6 +11,9 @@ export default new Vuex.Store({
   mutations: {
     updateContent (state, newContent) {
       state.content = newContent
+    },
+    updateSidebarMinimized (state, value) {
+      state.sidebarMinimized = value
     }
   }
 })
