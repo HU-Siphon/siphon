@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from './views/index.vue'
+import Content from './views/contentframe.vue'
+import Dashboard from './views/dashboard.vue'
 
 Vue.use(Router)
 
@@ -9,7 +10,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Index
+      component: Content
+    },
+    {
+      path: '/dashboard',
+      component: Dashboard
     }
   ]
 })
