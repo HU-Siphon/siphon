@@ -5,6 +5,7 @@
                 <div class="pure-g">
                     <div class="pure-u-1 brand" :class="{ 'pure-u-md-4-5' : !isSidebarCollapsed }">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
+
                     </div>
                     <div class="pure-u-1 compact" v-on:click="toggle"
                          :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
@@ -13,7 +14,9 @@
                 </div>
             </div>
             <div class="pure-u-1 search">
-                <search @gainFocus="showSearch" @loseFocus="hideSearch" v-if="!isSidebarCollapsed"></search>
+                <keep-alive>
+                    <search @gainFocus="showSearch" @loseFocus="hideSearch" v-if="!isSidebarCollapsed"></search>
+                </keep-alive>
                 <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="expand"></i>
             </div>
             <div class="pure-u-1" v-if="!isSearchActive">
@@ -89,6 +92,11 @@
         position: fixed;
         width: 20%;
         transition: left .5s ease;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .collapsed {

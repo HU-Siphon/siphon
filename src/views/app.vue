@@ -1,13 +1,7 @@
 <template>
     <div class="app">
         <div class="sidebar">
-            <sidebar title="Siphon" icon="fa-university" :links="sidebarLinks">
-                <div class="pure-g" slot="bottom">
-                    <div class="pure-u-1 settings">
-                        <i class="fa fa-gear"></i>
-                    </div>
-                </div>
-            </sidebar>
+            <sidebar title="Siphon" icon="fa-university" :links="sidebarLinks"></sidebar>
         </div>
         <div class="pure-g">
             <div class="pure-u-1">
@@ -31,8 +25,8 @@
       return {
         sidebarLinks: [
           {
-            title: 'Home',
-            icon: 'fa-home',
+            title: 'Navigation',
+            icon: 'fa-compass',
             links: [
               {
                 name: 'Dashboard',
@@ -42,6 +36,11 @@
               {
                 name: 'Content',
                 link: '/content',
+                type: 'ROUTER'
+              },
+              {
+                name: 'Settings',
+                link: '/settings',
                 type: 'ROUTER'
               }
             ]
