@@ -1,4 +1,26 @@
 export default {
+  options: {
+    shouldSort: true,
+    threshold: 0.3,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: [
+      {
+        name: 'name',
+        weight: 0.6
+      },
+      {
+        name: 'link',
+        weight: 0.1
+      },
+      {
+        name: 'terms',
+        weight: 0.3
+      }
+    ]
+  },
   links: [
     {
       name: 'Financial info',
@@ -7,7 +29,6 @@ export default {
       terms: [
         'Account',
         'Balance',
-        '$$$$',
         'CASHNet'
       ]
     },

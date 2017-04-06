@@ -5,7 +5,6 @@
                 <div class="pure-g">
                     <div class="pure-u-1 brand" :class="{ 'pure-u-md-4-5' : !isSidebarCollapsed }">
                         <i class="fa fa-fw" :class="icon"></i> {{ title }}
-
                     </div>
                     <div class="pure-u-1 compact" v-on:click="toggle"
                          :class="{ 'pure-u-md-1-5' : !isSidebarCollapsed  }">
@@ -15,16 +14,12 @@
             </div>
             <div class="pure-u-1 search">
                 <keep-alive>
-                    <search @gainFocus="showSearch" @loseFocus="hideSearch" v-if="!isSidebarCollapsed"></search>
+                    <search :searchObject="searchObject" :minimizeSearch="isSidebarCollapsed" @searchIconClick="expand"></search>
                 </keep-alive>
-                <i class="fa fa-fw fa-search" v-if="isSidebarCollapsed" @click="expand"></i>
             </div>
             <div class="pure-u-1" v-if="!isSearchActive">
-                <sidebarlink v-for="link in links" :key="link.title" :title="link.title" :icon="link.icon"
+                <sidebarlink v-for="link in sidebarLinks" :key="link.title" :title="link.title" :icon="link.icon"
                              :links="link.links" :isSidebarCollapsed="isSidebarCollapsed"></sidebarlink>
-            </div>
-            <div class="pure-u-1 bottom">
-                <slot name="bottom"></slot>
             </div>
         </div>
     </nav>
@@ -47,11 +42,15 @@
         type: String,
         required: true
       },
-      links: {
+      sidebarLinks: {
         type: Array,
         default: function () {
           return [{}]
         }
+      },
+      searchObject: {
+        type: Object,
+        required: true
       }
     },
     data: function () {
@@ -65,12 +64,6 @@
       },
       expand: function () {
         this.$store.commit('updateSidebarMinimized', false)
-      },
-      showSearch: function () {
-        this.isSearchActive = true
-      },
-      hideSearch: function () {
-        this.isSearchActive = false
       }
     },
     computed: {
@@ -141,7 +134,7 @@
             opacity: .25;
 
             &:hover {
-                opacity: 1;
+                opacity: .75;
             }
         }
     }
@@ -153,22 +146,5 @@
     .search {
         text-align: center;
         margin: 30px 0;
-    }
-
-    .bottom {
-        font-size: 22px;
-        text-align: center;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }
-
-    .settings {
-        padding: 20px 0;
-        background-color: $sidebarButtons;
-
-        &:hover {
-            background-color: darken($sidebarButtons, 10%);
-        }
     }
 </style>

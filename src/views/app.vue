@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <div class="sidebar">
-            <sidebar title="Siphon" icon="fa-university" :links="sidebarLinks"></sidebar>
+            <sidebar title="Siphon" icon="fa-university" :sidebarLinks="sidebarLinks" :searchObject="searchObject"></sidebar>
         </div>
         <div class="pure-g">
             <div class="pure-u-1">
@@ -16,6 +16,8 @@
 <script>
   import sidebar from '../components/sidebar.vue'
   import contentframe from './contentframe.vue'
+  import SidebarLinks from '../sidebarLinks'
+  import Search from '../search'
   export default {
     components: {
       sidebar,
@@ -23,103 +25,8 @@
     },
     data: function () {
       return {
-        sidebarLinks: [
-          {
-            title: 'Navigation',
-            icon: 'fa-compass',
-            links: [
-              {
-                name: 'Dashboard',
-                link: '/',
-                type: 'ROUTER'
-              },
-              {
-                name: 'Content',
-                link: '/content',
-                type: 'ROUTER'
-              },
-              {
-                name: 'Settings',
-                link: '/settings',
-                type: 'ROUTER'
-              }
-            ]
-          },
-          {
-            title: 'Personal',
-            icon: 'fa-user',
-            links: [
-              {
-                name: 'Chapel',
-                link: 'https://pipeline.harding.edu/block/592',
-                type: 'CONTENT'
-              },
-              {
-                name: 'Housing',
-                link: 'https://pipeline.harding.edu/block/66',
-                type: 'CONTENT'
-              }
-            ]
-          },
-          {
-            title: 'Student',
-            icon: 'fa-graduation-cap',
-            links: [
-              {
-                name: 'Enrolled classes',
-                link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchdDetl',
-                type: 'CONTENT'
-              },
-              {
-                name: 'Canvas',
-                link: 'https://harding.instructure.com/',
-                type: 'EXTERNAL'
-              },
-              {
-                name: 'EASEL',
-                link: 'https://cs.harding.edu/easel/cgi-bin/index',
-                type: 'EXTERNAL'
-              }
-            ]
-          },
-          {
-            title: 'Registration',
-            icon: 'fa-check',
-            links: [
-              {
-                name: 'Schedule planner',
-                link: 'https://hardingu.collegescheduler.com/',
-                type: 'CONTENT'
-              },
-              {
-                name: 'Schedule planner cart',
-                link: 'https://ssb.pipeline.harding.edu/hrdg/csched.p_regs_ssb',
-                type: 'CONTENT'
-              },
-              {
-                name: 'Chapel seat selection',
-                link: 'https://ssb.pipeline.harding.edu/hrdg/szpseat.P_PickSeat',
-                type: 'CONTENT'
-              },
-              {
-                name: 'Purchase textbooks',
-                link: 'https://pipeline.harding.edu/block/386',
-                type: 'CONTENT'
-              }
-            ]
-          },
-          {
-            title: 'Finance',
-            icon: 'fa-money',
-            links: [
-              {
-                name: 'Account Summary',
-                link: 'https://pipeline.harding.edu/block/75',
-                type: 'CONTENT'
-              }
-            ]
-          }
-        ]
+        sidebarLinks: SidebarLinks.links,
+        searchObject: Search
       }
     }
   }
@@ -135,8 +42,7 @@
     }
 
     .app {
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
         background: #3a6186;
         background: linear-gradient(to left, #3a6186, #89253e);
     }

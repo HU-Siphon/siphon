@@ -52,7 +52,7 @@
     }
 
     .dashboard-inner {
-        padding: 100px;
+        padding: 30px 10% 0px;
     }
 
     .dashboard-title {

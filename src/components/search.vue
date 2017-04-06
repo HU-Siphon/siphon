@@ -1,43 +1,48 @@
 <template>
-    <div class="search-form">
-        <input placeholder="Type to search" v-model:value="value" @input="search" @focus="gainFocus" @blur="loseFocus">
-        <div class="results" v-if="focus" @mousedown="focusLink">
-            <div v-for="result in topResults">
-                <result :name="result.name" :link="result.link" :type="result.type"></result>
+    <div class="search">
+        <div class="search-form" v-if="!minimizeSearch">
+            <input placeholder="Type to search" type="search" v-model:value="value" @input="search"
+                   v-focus="focused" @focus="focused = true" @blur="focused = false"
+                   @keydown.down.prevent="moveDown"
+                   @keydown.up.prevent="moveUp">
+            <div class="results">
+                <template v-for="(result, index) in topResults">
+                    <result :name="result.name" :link="result.link" :type="result.type" :index="index" :focusedIndex="focusedIndex"></result>
+                </template>
             </div>
         </div>
+        <i class="fa fa-fw fa-search" v-if="minimizeSearch" @click="searchIconClick"></i>
     </div>
 </template>
 
 <script>
   import result from '../components/result.vue'
   import Fuse from 'fuse.js'
-  import Links from '../links'
+  import { focus } from 'vue-focus'
 
   export default {
+    directives: {
+      focus: focus
+    },
     components: {
       result
     },
+    props: {
+      minimizeSearch: {
+        type: Boolean,
+        default: false
+      },
+      searchObject: {
+        type: Object,
+        required: true
+      }
+    },
     data: function () {
       return {
-        focus: false,
-        clickedLink: false,
         value: '',
         results: [],
-        options: {
-          shouldSort: true,
-          threshold: 0.3,
-          location: 0,
-          distance: 100,
-          maxPatternLength: 32,
-          minMatchCharLength: 1,
-          keys: [
-            'name',
-            'link',
-            'terms'
-          ]
-        },
-        links: Links.links
+        focusedIndex: -1,
+        focused: false
       }
     },
     computed: {
@@ -46,38 +51,28 @@
       }
     },
     methods: {
-      focusLink: function () {
-        this.clickedLink = true
-      },
       search: function () {
         this.results = this.fuse.search(this.value)
-        if (this.value === '') {
-          this.loseFocus()
-        } else {
-          this.gainFocus()
-        }
       },
-      gainFocus: function () {
-        if (this.value !== '') {
-          this.focus = true
-          this.$emit('gainFocus')
-        }
+      searchIconClick: function () {
+        this.$emit('searchIconClick')
+        this.focused = true
       },
-      loseFocus: function () {
-        if (!this.clickedLink) {
-          this.focus = false
-          this.$emit('loseFocus')
-        }
+      moveDown: function () {
+        this.focusedIndex += 1
+      },
+      moveUp: function () {
+        this.focusedIndex -= 1
       }
     },
     created: function () {
-      this.fuse = new Fuse(this.links, this.options)
+      this.fuse = new Fuse(this.searchObject.links, this.searchObject.options)
     }
   }
 </script>
 
 <style lang="scss" scoped>
-    .search-form {
+    .search {
         margin: 0 10%;
         input {
             color: #000;
