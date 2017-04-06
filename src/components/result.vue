@@ -1,14 +1,18 @@
 <template>
     <div class="result">
         <div class="result-inner">
-            <a v-on:click="clickLink" v-if="type === 'CONTENT'">{{ name }}</a>
-            <a :href="link" v-if="type === 'LINK'">{{ name }}</a>
+            <applink class="list-link" :name="name" :link="link" :type="type" v-on:click="clickLink"></applink>
         </div>
     </div>
 </template>
 
 <script>
+  import applink from '../components/applink.vue'
+
   export default {
+    components: {
+      applink
+    },
     props: {
       name: {
         type: String,

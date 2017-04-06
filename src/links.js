@@ -1,373 +1,176 @@
 export default {
   links: [
     {
-      name: 'Human resources',
-      link: 'https://pipeline.harding.edu/block/27',
+      name: 'Financial info',
+      link: 'https://ssb.pipeline.harding.edu/embed/z_cashnet_sso.p_cashnet_login',
+      type: 'CONTENT',
       terms: [
-        'Handbooks',
-        'Payroll',
-        'Insurance',
-        'Retirement'
-      ],
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Mission trips',
-      link: 'https://pipeline.harding.edu/block/37',
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Name change',
-      link: 'https://pipeline.harding.edu/block/288',
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Pay info',
-      link: 'https://pipeline.harding.edu/block/287',
-      terms: [
-        'Earnings',
-        'Pay stub',
-        'Deductions'
-      ],
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'SSN change info',
-      link: 'https://pipeline.harding.edu/block/284',
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Tax forms',
-      link: 'https://pipeline.harding.edu/block/285',
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Time sheets and vacation requests',
-      link: 'https://pipeline.harding.edu/block/286',
-      terms: [
-        'Job'
-      ],
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Update my info',
-      link: 'https://pipeline.harding.edu/block/283',
-      terms: [
-        'Contact'
-      ],
-      category: 'Personal',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Academic profile',
-      link: 'https://pipeline.harding.edu/block/383',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Academic suspension appeal',
-      link: 'https://pipeline.harding.edu/block/322',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Account summary',
-      link: 'https://pipeline.harding.edu/block/75',
-      terms: [
-        'Balance'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Account summary by term',
-      link: 'https://pipeline.harding.edu/block/324',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Bookstore',
-      link: 'https://pipeline.harding.edu/block/386',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Campus services',
-      link: 'https://pipeline.harding.edu/block/164992',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Chapel',
-      link: 'https://pipeline.harding.edu/block/592',
-      terms: [
-        'Seat',
-        'Absences',
-        'Excuses'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Check request with lender refund',
-      link: 'https://pipeline.harding.edu/block/332',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Course schedule/enrollment',
-      link: 'https://pipeline.harding.edu/block/477',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Degree evaluation',
-      link: 'https://pipeline.harding.edu/block/327',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Dynamic catalog',
-      link: 'https://pipeline.harding.edu/block/328',
-      category: 'Student',
-      type: 'CONTENT'
+        'Account',
+        'Balance',
+        '$$$$',
+        'CASHNet'
+      ]
     },
     {
       name: 'Financial aid',
-      link: 'https://pipeline.harding.edu/block/24',
-      terms: [
-        'Apply'
-      ],
-      category: 'Student',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu',
       type: 'CONTENT'
     },
     {
-      name: 'Global literacy waiver',
-      link: 'https://pipeline.harding.edu/block/333',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Grades',
-      link: 'https://pipeline.harding.edu/block/404',
-      terms: [
-        'Final',
-        'Midterm'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Honors college info',
-      link: 'https://pipeline.harding.edu/block/249733',
-      terms: [
-        'Enrollment',
-        'Capstone'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Housing status (Signout)',
+      name: 'Dorm information',
       link: 'https://pipeline.harding.edu/block/66',
-      category: 'Student',
-      type: 'CONTENT'
+      type: 'CONTENT',
+      terms: [
+        'Sign out',
+        'Housing'
+      ]
+    },
+    {
+      name: 'Privileged housing status',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/zwskphap.P_StuEntry',
+      type: 'CONTENT',
+      terms: [
+        'Dorm'
+      ]
     },
     {
       name: 'Important dates',
       link: 'https://pipeline.harding.edu/block/50',
+      type: 'CONTENT',
       terms: [
-        'Registration'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
+        'Finals',
+        'Schedule'
+      ]
     },
     {
       name: 'Microsoft office for students',
       link: 'https://pipeline.harding.edu/block/39',
+      type: 'CONTENT',
       terms: [
-        'Free',
-        'Software'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
+        'Word',
+        'PowerPoint',
+        'Excel'
+      ]
     },
     {
-      name: 'My classes (Registration)',
-      link: 'https://pipeline.harding.edu/block/410',
+      name: 'Campus box',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/zwlkcomb.P_DispInfo',
+      type: 'CONTENT',
       terms: [
-        'Course',
-        'Schedule',
-        'Planner',
-        'Add',
-        'Drop',
-        'Enrollment verification'
-      ],
-      category: 'Student',
+        'Mail',
+        'Post office'
+      ]
+    },
+    {
+      name: 'Chapel information',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/zwskchpl.P_GetTerm',
       type: 'CONTENT'
     },
     {
-      name: 'Other important tasks',
-      link: 'https://pipeline.harding.edu/block/52',
-      category: 'Student',
+      name: 'Schedule planner',
+      link: 'https://hardingu.collegescheduler.com/',
       type: 'CONTENT'
     },
     {
-      name: 'Parking permit info',
-      link: 'https://pipeline.harding.edu/block/63',
-      category: 'Student',
+      name: 'Schedule viewer by week',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchd',
       type: 'CONTENT'
     },
     {
-      name: 'Payments (CashNet)',
-      link: 'https://pipeline.harding.edu/block/70',
-      category: 'Student',
+      name: 'Enrolled classes',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchdDetl',
       type: 'CONTENT'
     },
     {
-      name: 'Proxy Access',
-      link: 'https://pipeline.harding.edu/block/25',
+      name: 'Schedule planner cart',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/csched.p_regs_ssb',
+      type: 'CONTENT'
+    },
+    {
+      name: 'Chapel seat selection',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/szpseat.P_PickSeat',
+      type: 'CONTENT'
+    },
+    {
+      name: 'Purchase textbooks',
+      link: 'https://pipeline.harding.edu/block/386',
+      type: 'CONTENT',
       terms: [
-        'Billing',
-        'View',
-        'Grades'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
+        'Bookstore'
+      ]
     },
     {
-      name: 'Public safety contact info',
-      link: 'https://pipeline.harding.edu/block/20',
+      name: 'Public safety',
+      link: 'http://www.harding.edu/public-safety',
+      type: 'EXTERNAL'
+    },
+    {
+      name: 'Parking registration',
+      link: 'http://www.harding.edu/public-safety/parking-registration',
+      type: 'EXTERNAL'
+    },
+    {
+      name: 'Registrar',
+      link: 'http://www.harding.edu/registrar',
+      type: 'EXTERNAL'
+    },
+    {
+      name: 'Bookstore',
+      link: 'http://hubookstore.harding.edu/home.aspx',
+      type: 'EXTERNAL'
+    },
+    {
+      name: 'Career search',
+      link: 'http://www.harding.edu/academics/academic-support/career/jobsearch',
+      type: 'EXTERNAL',
       terms: [
-        'Emergency'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
+        'Bison'
+      ]
     },
     {
-      name: 'Registrar forms',
-      link: 'https://pipeline.harding.edu/block/49',
-      terms: [
-        'Transcript',
-        'Major',
-        'Minor',
-        'Change'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
+      name: 'Counseling center',
+      link: 'http://www.harding.edu/academics/colleges-departments/bible-ministry/centers/christian-counseling/counseling-center',
+      type: 'EXTERNAL'
     },
     {
-      name: 'Residence life (Housing)',
-      link: 'https://pipeline.harding.edu/block/406',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Select a meal plan',
-      link: 'https://pipeline.harding.edu/block/19',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Social clubs info',
-      link: 'https://pipeline.harding.edu/block/3433',
-      terms: [
-        'Handbook',
-        'Profiles'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Student records',
-      link: 'https://pipeline.harding.edu/block/55',
-      terms: [
-        'Grades',
-        'Appeals',
-        'Bill',
-        'Tax'
-      ],
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Student surveys',
-      link: 'https://pipeline.harding.edu/block/110824',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Technology Services',
-      link: 'https://pipeline.harding.edu/block/43',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Testing lab',
-      link: 'https://pipeline.harding.edu/block/44',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Weather policy',
-      link: 'https://pipeline.harding.edu/block/21',
-      category: 'Student',
-      type: 'CONTENT'
-    },
-    {
-      name: 'Withdrawing or dropping a class',
-      link: 'https://pipeline.harding.edu/block/56',
-      category: 'Student',
-      type: 'CONTENT'
+      name: 'Health services',
+      link: 'http://www.harding.edu/student-life/healthservices',
+      type: 'EXTERNAL'
     },
     {
       name: 'Harding Homepage',
       link: 'http://www.harding.edu/',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Pipeline',
       link: 'https://pipeline-old.harding.edu',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'New Pipeline',
       link: 'https://pipeline.harding.edu',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Canvas',
       link: 'https://harding.instructure.com/',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Computer science portal',
       link: 'http://cs.harding.edu/',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'EASEL',
       link: 'https://cs.harding.edu/easel/cgi-bin/index',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Microsoft IMAGINE',
       link: 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=5bbb0d2d-3770-e011-971f-0030487d8897&vsro=8&JSEnabled=1',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Campus Dish',
@@ -376,12 +179,12 @@ export default {
         'Cafeteria',
         'Meal'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Testing Lab',
-      link: 'https://misnet.harding.edu/testinglab/index.php'
+      link: 'https://misnet.harding.edu/testinglab/index.php',
+      type: 'CONTENT'
     },
     {
       name: 'SafeConnect Dashboard',
@@ -389,8 +192,7 @@ export default {
       terms: [
         'DormNet'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Q Ware',
@@ -398,8 +200,7 @@ export default {
       terms: [
         'DormNet'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Harding Wiki',
@@ -408,8 +209,7 @@ export default {
         'Kenobi',
         'DormNet'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Password change',
@@ -417,8 +217,7 @@ export default {
       terms: [
         'DormNet'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Teleinfo',
@@ -426,23 +225,22 @@ export default {
       terms: [
         'DormNet'
       ],
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
+    },
+    {
+      name: 'DormNet blog',
+      link: 'http://dormnet.blogspot.com/',
+      type: 'EXTERNAL'
     },
     {
       name: 'Harding library',
       link: 'https://www.harding.edu/library',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     },
     {
       name: 'Harding Gmail',
       link: 'https://pipeline.harding.edu/email',
-      category: 'Misc',
-      type: 'LINK'
+      type: 'EXTERNAL'
     }
-  ],
-  betterLinks: [
-    //
   ]
 }

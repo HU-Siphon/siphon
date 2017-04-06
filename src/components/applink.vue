@@ -1,8 +1,8 @@
 <template>
-    <div class="app-link">
-        <a :href="link" v-if="type === 'EXTERNAL'">{{ name }}</a>
-        <a v-on:click="clickContentLink" v-if="type === 'CONTENT'">{{ name }}</a>
-        <router-link :to="link" v-if="type === 'ROUTER'">{{ name }}</router-link>
+    <div>
+        <a :href="link" target="_blank" v-if="type === 'EXTERNAL'" class="app-link">{{ name }} <i class="fa fa-external-link"></i></a>
+        <a v-on:click="clickContentLink" v-if="type === 'CONTENT'" class="app-link">{{ name }}</a>
+        <router-link :to="link" v-if="type === 'ROUTER'" class="app-link">{{ name }}</router-link>
     </div>
 </template>
 
@@ -25,11 +25,19 @@
     methods: {
       clickContentLink: function () {
         this.$store.commit('updateContent', this.link)
+        this.$router.push('/content')
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
+    .app-link {
+        color: #fff;
+        text-decoration: none;
 
+        i {
+            font-size: 75%;
+        }
+    }
 </style>
