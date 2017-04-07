@@ -1,7 +1,7 @@
 <template>
     <div>
-        <a :href="link" target="_blank" v-if="type === 'EXTERNAL'" class="app-link">{{ name }} <i class="fa fa-external-link"></i></a>
-        <a v-on:click="clickContentLink" v-if="type === 'CONTENT'" class="app-link">{{ name }}</a>
+        <a :href="link" target="_blank" v-if="type === 'EXTERNAL'" class="app-link">{{ name }} <i
+                class="fa fa-external-link"></i></a>
         <router-link :to="link" v-if="type === 'ROUTER'" class="app-link">{{ name }}</router-link>
     </div>
 </template>
@@ -22,10 +22,22 @@
         required: true
       }
     },
+    computed: {
+      processedLink: function () {
+        if (this.type === 'EXTERNAL') {
+          return this.link
+        } else if (this.type === 'ROUTER') {
+          return this.link
+        }
+      }
+    },
     methods: {
-      clickContentLink: function () {
-        this.$store.commit('updateContent', this.link)
-        this.$router.push('/content')
+      clickLink: function () {
+        if (this.type === 'EXTERNAL') {
+          //
+        } else if (this.type === 'ROUTER') {
+          //
+        }
       }
     }
   }

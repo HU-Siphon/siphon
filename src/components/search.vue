@@ -2,12 +2,10 @@
     <div class="search">
         <div class="search-form" v-if="!minimizeSearch">
             <input placeholder="Type to search" type="search" v-model:value="value" @input="search"
-                   v-focus="focused" @focus="focused = true" @blur="focused = false"
-                   @keydown.down.prevent="moveDown"
-                   @keydown.up.prevent="moveUp">
+                   v-focus="focused" @focus="focused = true" @blur="focused = false">
             <div class="results">
                 <template v-for="(result, index) in topResults">
-                    <result :name="result.name" :link="result.link" :type="result.type" :index="index" :focusedIndex="focusedIndex"></result>
+                    <result :name="result.name" :link="result.link" :type="result.type" :index="index"></result>
                 </template>
             </div>
         </div>
@@ -16,7 +14,7 @@
 </template>
 
 <script>
-  import result from '../components/result.vue'
+  import result from './search-result.vue'
   import Fuse from 'fuse.js'
   import { focus } from 'vue-focus'
 
@@ -41,7 +39,7 @@
       return {
         value: '',
         results: [],
-        focusedIndex: -1,
+        focusedIndex: 0,
         focused: false
       }
     },
@@ -53,16 +51,21 @@
     methods: {
       search: function () {
         this.results = this.fuse.search(this.value)
+        this.focusedIndex = 0
       },
       searchIconClick: function () {
         this.$emit('searchIconClick')
         this.focused = true
       },
       moveDown: function () {
-        this.focusedIndex += 1
+        if (this.focusedIndex < this.topResults.length - 1) {
+          this.focusedIndex += 1
+        }
       },
       moveUp: function () {
-        this.focusedIndex -= 1
+        if (this.focusedIndex !== 0) {
+          this.focusedIndex -= 1
+        }
       }
     },
     created: function () {

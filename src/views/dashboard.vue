@@ -1,9 +1,7 @@
 <template>
-    <div class="pure-g dashboard">
-        <div class="pure-u-1 dashboard-inner">
-            <div class="_center">
-                <h1 class="dashboard-title">Welcome to Siphon</h1>
-            </div>
+    <div class="pure-g dashboard-container">
+        <div class="pure-u-1 dashboard">
+            <h1 class="dashboard-title _center">Welcome to Siphon</h1>
             <p>
                 Siphon is still in development. It won't be perfect for a while.
             </p>
@@ -12,8 +10,8 @@
             </p>
             <h2>Getting Started</h2>
             <p>
-                In order to use Siphon, you must first login to <a href="https://pipeline.harding.edu/">Pipeline</a>, otherwise you won't be able to access anything here.
-        </p>
+                In order to use Siphon, you must first login to <router-link to="/content/pipeline">Pipeline</router-link>, otherwise you won't be able to access anything here.
+            </p>
             <h2>Contact</h2>
             <p>
                 If you discover any issues with Siphon, contact <a href="mailto:jshepherd@harding.edu">jshepherd@harding.edu</a>
@@ -25,9 +23,12 @@
             <h2>Plans (Ordered by priority)</h2>
             <ul>
                 <li>General UI polish
-                <ul>
-                    <li>Mobile swipe gestures</li>
-                </ul>
+                    <ul>
+                        <li>Mobile swipe gestures</li>
+                        <li>Search navigation with keyboard</li>
+                        <li>Hide sidebar when searching</li>
+                        <li>Search results should be entirely clickable (and seem like links)</li>
+                    </ul>
                 </li>
                 <li>People search</li>
                 <li>Show current Canvas & EASEL grades on dashboard</li>
@@ -44,19 +45,19 @@
 
 </script>
 
-<style lang="scss">
-    .dashboard {
+<style lang="scss" scoped>
+    .dashboard-container {
         background-color: #fff;
         width: 100%;
         min-height: 100vh;
-    }
 
-    .dashboard-inner {
-        padding: 30px 10% 0px;
-    }
+        > .dashboard {
+            padding: 30px 10% 0;
 
-    .dashboard-title {
-        margin: 0;
-        padding: 0;
+            > .dashboard-title {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 </style>

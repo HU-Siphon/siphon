@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
 
-import App from './views/app.vue'
+import App from './views/app-container.vue'
 
 import 'purecss'
 import 'purecss/build/grids-responsive-min.css'

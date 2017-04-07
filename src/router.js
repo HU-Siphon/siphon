@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Content from './views/contentframe.vue'
+import Content from './views/content-container.vue'
 import Dashboard from './views/dashboard.vue'
 import Settings from './views/settings.vue'
 
@@ -14,7 +14,7 @@ export default new Router({
       component: Dashboard
     },
     {
-      path: '/content',
+      path: '/content/:name',
       component: Content
     },
     {

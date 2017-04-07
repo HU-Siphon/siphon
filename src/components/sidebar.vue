@@ -120,6 +120,7 @@
     .compact {
         background-color: $sidebarButtons;
         position: relative;
+        z-index: 150;
 
         &:hover {
             background-color: darken($sidebarButtons, 10%);

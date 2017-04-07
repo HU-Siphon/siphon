@@ -10,11 +10,6 @@ export default {
           type: 'ROUTER'
         },
         {
-          name: 'Content',
-          link: '/content',
-          type: 'ROUTER'
-        },
-        {
           name: 'Settings',
           link: '/settings',
           type: 'ROUTER'
@@ -27,13 +22,13 @@ export default {
       links: [
         {
           name: 'Chapel',
-          link: 'https://pipeline.harding.edu/block/592',
-          type: 'CONTENT'
+          link: '/content/chapel',
+          type: 'ROUTER'
         },
         {
           name: 'Housing',
-          link: 'https://pipeline.harding.edu/block/66',
-          type: 'CONTENT'
+          link: '/content/housing',
+          type: 'ROUTER'
         }
       ]
     },
@@ -43,8 +38,8 @@ export default {
       links: [
         {
           name: 'Enrolled classes',
-          link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchdDetl',
-          type: 'CONTENT'
+          link: '/content/enrolled_classes',
+          type: 'ROUTER'
         },
         {
           name: 'Canvas',
@@ -64,23 +59,23 @@ export default {
       links: [
         {
           name: 'Schedule planner',
-          link: 'https://hardingu.collegescheduler.com/',
-          type: 'CONTENT'
+          link: '/content/schedule_planner',
+          type: 'ROUTER'
         },
         {
           name: 'Schedule planner cart',
-          link: 'https://ssb.pipeline.harding.edu/hrdg/csched.p_regs_ssb',
-          type: 'CONTENT'
+          link: '/content/schedule_planner_cart',
+          type: 'ROUTER'
         },
         {
           name: 'Chapel seat selection',
-          link: 'https://ssb.pipeline.harding.edu/hrdg/szpseat.P_PickSeat',
-          type: 'CONTENT'
+          link: '/content/chapel_seat_selection',
+          type: 'ROUTER'
         },
         {
           name: 'Purchase textbooks',
-          link: 'https://pipeline.harding.edu/block/386',
-          type: 'CONTENT'
+          link: '/content/purchase_textbooks',
+          type: 'ROUTER'
         }
       ]
     },
@@ -89,9 +84,9 @@ export default {
       icon: 'fa-money',
       links: [
         {
-          name: 'Account Summary',
-          link: 'https://pipeline.harding.edu/block/75',
-          type: 'CONTENT'
+          name: 'Financial info',
+          link: '/content/finance',
+          type: 'ROUTER'
         }
       ]
     }
