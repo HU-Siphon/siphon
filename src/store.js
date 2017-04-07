@@ -5,13 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    sidebarMinimized: false,
-    content: 'https://pipeline.harding.edu/'
+    sidebarMinimized: false
   },
   mutations: {
-    updateContent (state, newContent) {
-      state.content = newContent
-    },
     updateSidebarMinimized (state, value) {
       state.sidebarMinimized = value
     }

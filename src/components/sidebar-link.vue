@@ -1,16 +1,26 @@
 <template>
     <div class="sidebar-link">
-        <div class="link-title" :class="{ '_center' : isSidebarCollapsed }" @click="toggleExpand">
-            <i class="fa fa-fw icon" :class="icon"></i><a v-if="!isSidebarCollapsed">{{ title }}</a>
+        <div class="link-title"
+             :class="{ '_center' : isSidebarCollapsed }"
+             @click="toggleExpand">
+            <i class="fa fa-fw icon"
+               :class="icon"></i><a v-if="!isSidebarCollapsed">{{ title }}</a>
         </div>
-        <div class="link-list" v-if="areLinksShown">
-            <applink class="list-link" v-for="link in links" :key="link.name" :name="link.name" :link="link.link" :type="link.type"></applink>
+        <div class="link-list"
+             v-if="areLinksShown">
+            <template v-for="link in links">
+                <applink class="list-link"
+                         :key="link.name"
+                         :name="link.name"
+                         :link="link.link"
+                         :type="link.type"></applink>
+            </template>
         </div>
     </div>
 </template>
 
 <script>
-  import applink from './applink.vue'
+  import applink from './app-link.vue'
   export default {
     components: {
       applink

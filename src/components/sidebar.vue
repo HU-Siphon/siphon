@@ -14,7 +14,7 @@
             </div>
             <div class="pure-u-1 search">
                 <keep-alive>
-                    <search :searchObject="searchObject" :minimizeSearch="isSidebarCollapsed" @searchIconClick="expand"></search>
+                    <search :searchOptions="searchOptions" :minimizeSearch="isSidebarCollapsed" @searchIconClick="expand"></search>
                 </keep-alive>
             </div>
             <div class="pure-u-1" v-if="!isSearchActive">
@@ -26,8 +26,8 @@
 </template>
 
 <script>
-  import search from './search.vue'
-  import sidebarlink from './sidebarlink.vue'
+  import search from './search-bar.vue'
+  import sidebarlink from './sidebar-link.vue'
   export default {
     components: {
       search,
@@ -48,7 +48,7 @@
           return [{}]
         }
       },
-      searchObject: {
+      searchOptions: {
         type: Object,
         required: true
       }
@@ -119,8 +119,6 @@
 
     .compact {
         background-color: $sidebarButtons;
-        position: relative;
-        z-index: 150;
 
         &:hover {
             background-color: darken($sidebarButtons, 10%);

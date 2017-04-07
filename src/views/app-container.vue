@@ -3,7 +3,7 @@
         <sidebar title="Siphon"
                  icon="fa-university"
                  :sidebarLinks="sidebarLinks"
-                 :searchObject="searchSettings"></sidebar>
+                 :searchOptions="searchOptions"></sidebar>
         <div :class="[sidebarMinimized ? 'minimized' : 'maximized']">
             <router-view></router-view>
         </div>
@@ -13,7 +13,7 @@
 <script>
   import sidebar from '../components/sidebar.vue'
   import sidebarLinks from '../sidebarLinks'
-  import searchSettings from '../search'
+  import searchOptions from '../search'
   export default {
     components: {
       sidebar
@@ -21,7 +21,7 @@
     data: function () {
       return {
         sidebarLinks: sidebarLinks.links,
-        searchSettings: searchSettings
+        searchOptions: searchOptions
       }
     },
     computed: {
@@ -70,9 +70,6 @@
             @media screen and (max-width: 48em) {
                 width: 100%;
                 margin-left: 0;
-                position: relative;
-                left: 80%;
-                z-index: 100;
             }
         }
     }

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import applink from '../components/applink.vue'
+  import applink from './app-link.vue'
   import { mixin as focusMixin } from 'vue-focus'
 
   export default {

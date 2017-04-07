@@ -24,8 +24,8 @@ export default {
   links: [
     {
       name: 'Financial info',
-      link: '/content/financial_info',
-      type: 'CONTENT',
+      link: '/content/finance',
+      type: 'ROUTER',
       terms: [
         'Account',
         'Balance',
@@ -35,12 +35,12 @@ export default {
     {
       name: 'Financial aid',
       link: '/content/financial_aid',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Dorm information',
       link: '/content/dorm',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Sign out',
         'Housing'
@@ -49,7 +49,7 @@ export default {
     {
       name: 'Privileged housing status',
       link: '/content/privileged_housing',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Dorm'
       ]
@@ -57,7 +57,7 @@ export default {
     {
       name: 'Important dates',
       link: '/content/important_dates',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Finals',
         'Schedule'
@@ -66,7 +66,7 @@ export default {
     {
       name: 'Microsoft office for students',
       link: '/content/microsoft_office',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Word',
         'PowerPoint',
@@ -76,7 +76,7 @@ export default {
     {
       name: 'Campus box',
       link: '/content/campus_box',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Mail',
         'Post office'
@@ -85,37 +85,37 @@ export default {
     {
       name: 'Chapel information',
       link: '/content/chapel',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Schedule planner',
       link: '/content/schedule_planner',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Schedule viewer by week',
       link: '/content/schedule_by_week',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Enrolled classes',
       link: '/content/enrolled_classes',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Schedule planner cart',
       link: '/content/schedule_planner_cart',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Chapel seat selection',
       link: '/content/chapel_seat_selection',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Purchase textbooks',
       link: '/content/purchase_textbooks',
-      type: 'CONTENT',
+      type: 'ROUTER',
       terms: [
         'Bookstore'
       ]
@@ -123,7 +123,7 @@ export default {
     {
       name: 'Testing Lab',
       link: '/content/testing_lab',
-      type: 'CONTENT'
+      type: 'ROUTER'
     },
     {
       name: 'Public safety',
