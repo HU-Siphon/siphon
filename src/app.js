@@ -5,6 +5,7 @@ import WebFont from 'webfontloader'
 import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
+import './analytics'
 
 import App from './views/app-container.vue'
 
