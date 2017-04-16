@@ -24,8 +24,8 @@ export default {
   links: [
     {
       name: 'Financial info',
-      link: '/content/finance',
-      type: 'ROUTER',
+      link: 'https://ssb.pipeline.harding.edu/embed/z_cashnet_sso.p_cashnet_login',
+      type: 'EXTERNAL',
       terms: [
         'Account',
         'Balance',
@@ -34,13 +34,13 @@ export default {
     },
     {
       name: 'Financial aid',
-      link: '/content/financial_aid',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/hrdg/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu',
+      type: 'EXTERNAL'
     },
     {
       name: 'Dorm information',
-      link: '/content/dorm',
-      type: 'ROUTER',
+      link: 'https://pipeline.harding.edu/block/66',
+      type: 'EXTERNAL',
       terms: [
         'Sign out',
         'Housing'
@@ -48,16 +48,16 @@ export default {
     },
     {
       name: 'Privileged housing status',
-      link: '/content/privileged_housing',
-      type: 'ROUTER',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/zwskphap.P_StuEntry',
+      type: 'EXTERNAL',
       terms: [
         'Dorm'
       ]
     },
     {
       name: 'Important dates',
-      link: '/content/important_dates',
-      type: 'ROUTER',
+      link: 'https://pipeline.harding.edu/block/50',
+      type: 'EXTERNAL',
       terms: [
         'Finals',
         'Schedule'
@@ -65,8 +65,8 @@ export default {
     },
     {
       name: 'Microsoft office for students',
-      link: '/content/microsoft_office',
-      type: 'ROUTER',
+      link: 'https://pipeline.harding.edu/block/39',
+      type: 'EXTERNAL',
       terms: [
         'Word',
         'PowerPoint',
@@ -75,8 +75,8 @@ export default {
     },
     {
       name: 'Campus box',
-      link: '/content/campus_box',
-      type: 'ROUTER',
+      link: 'https://ssb.pipeline.harding.edu/hrdg/zwlkcomb.P_DispInfo',
+      type: 'EXTERNAL',
       terms: [
         'Mail',
         'Post office'
@@ -84,46 +84,46 @@ export default {
     },
     {
       name: 'Chapel information',
-      link: '/content/chapel',
-      type: 'ROUTER'
+      link: 'https://pipeline.harding.edu/block/592',
+      type: 'EXTERNAL'
     },
     {
       name: 'Schedule planner',
-      link: '/content/schedule_planner',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/embed/csched.p_redirect',
+      type: 'EXTERNAL'
     },
     {
       name: 'Schedule viewer by week',
-      link: '/content/schedule_by_week',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchd',
+      type: 'EXTERNAL'
     },
     {
       name: 'Enrolled classes',
-      link: '/content/enrolled_classes',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchdDetl',
+      type: 'EXTERNAL'
     },
     {
       name: 'Schedule planner cart',
-      link: '/content/schedule_planner_cart',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/hrdg/csched.p_regs_ssb',
+      type: 'EXTERNAL'
     },
     {
       name: 'Chapel seat selection',
-      link: '/content/chapel_seat_selection',
-      type: 'ROUTER'
+      link: 'https://ssb.pipeline.harding.edu/hrdg/szpseat.P_PickSeat',
+      type: 'EXTERNAL'
     },
     {
       name: 'Purchase textbooks',
-      link: '/content/purchase_textbooks',
-      type: 'ROUTER',
+      link: 'https://pipeline.harding.edu/block/386',
+      type: 'EXTERNAL',
       terms: [
         'Bookstore'
       ]
     },
     {
       name: 'Testing Lab',
-      link: '/content/testing_lab',
-      type: 'ROUTER'
+      link: 'https://misnet.harding.edu/testinglab/index.php',
+      type: 'EXTERNAL'
     },
     {
       name: 'Public safety',

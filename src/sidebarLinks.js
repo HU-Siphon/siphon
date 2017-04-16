@@ -22,13 +22,13 @@ export default {
       links: [
         {
           name: 'Chapel',
-          link: '/content/chapel',
-          type: 'ROUTER'
+          link: 'https://pipeline.harding.edu/block/592',
+          type: 'EXTERNAL'
         },
         {
           name: 'Housing',
-          link: '/content/housing',
-          type: 'ROUTER'
+          link: 'https://pipeline.harding.edu/block/66',
+          type: 'EXTERNAL'
         }
       ]
     },
@@ -38,8 +38,8 @@ export default {
       links: [
         {
           name: 'Enrolled classes',
-          link: '/content/enrolled_classes',
-          type: 'ROUTER'
+          link: 'https://ssb.pipeline.harding.edu/hrdg/bwskfshd.P_CrseSchdDetl',
+          type: 'EXTERNAL'
         },
         {
           name: 'Canvas',
@@ -59,23 +59,23 @@ export default {
       links: [
         {
           name: 'Schedule planner',
-          link: '/content/schedule_planner',
-          type: 'ROUTER'
+          link: 'https://ssb.pipeline.harding.edu/embed/csched.p_redirect',
+          type: 'EXTERNAL'
         },
         {
           name: 'Schedule planner cart',
-          link: '/content/schedule_planner_cart',
-          type: 'ROUTER'
+          link: 'https://ssb.pipeline.harding.edu/hrdg/csched.p_regs_ssb',
+          type: 'EXTERNAL'
         },
         {
           name: 'Chapel seat selection',
-          link: '/content/chapel_seat_selection',
-          type: 'ROUTER'
+          link: 'https://ssb.pipeline.harding.edu/hrdg/szpseat.P_PickSeat',
+          type: 'EXTERNAL'
         },
         {
           name: 'Purchase textbooks',
-          link: '/content/purchase_textbooks',
-          type: 'ROUTER'
+          link: 'https://pipeline.harding.edu/block/386',
+          type: 'EXTERNAL'
         }
       ]
     },
@@ -85,8 +85,8 @@ export default {
       links: [
         {
           name: 'Financial info',
-          link: '/content/finance',
-          type: 'ROUTER'
+          link: 'https://ssb.pipeline.harding.edu/embed/z_cashnet_sso.p_cashnet_login',
+          type: 'EXTERNAL'
         }
       ]
     }
