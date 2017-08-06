@@ -1,21 +1,10 @@
-# siphon-vue
+# Siphon Vue
+[![Build Status](https://travis-ci.org/ShepherdJerred/siphon-vue.svg?branch=master)](https://travis-ci.org/ShepherdJerred/siphon-vue)
 
-> Vue client for siphon-web
+## About
 
-## Build Setup
+Siphon is a better way to navigate Harding's Pipeline website. It has a far superior search interface, and a much more cleaner, modern design.
 
-``` bash
-# install dependencies
-npm install
+Originally, Siphon was made to embed Harding's webpages into the main content part of the site using iFrames. Harding's IS&T department expressed great displeasure at this idea, so it has since been reworked so that Siphon simply links to Pipeline rather than embeds it.
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![Screenshot](https://i.imgur.com/3lmHiYj.png)
