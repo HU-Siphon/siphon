@@ -8,11 +8,6 @@ export default {
           name: 'Dashboard',
           link: '/',
           type: 'ROUTER'
-        },
-        {
-          name: 'Settings',
-          link: '/settings',
-          type: 'ROUTER'
         }
       ]
     },
