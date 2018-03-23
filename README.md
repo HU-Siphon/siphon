@@ -7,4 +7,6 @@ Siphon is a better way to navigate Harding's Pipeline website. It has a far supe
 
 Originally, Siphon was made to embed Harding's webpages into the main content part of the site using iFrames. Harding's IS&T department expressed great displeasure at this idea, so it has since been reworked so that Siphon simply links to Pipeline rather than embeds it.
 
+Because of IS&T not approving this project, it is no longer worked on.
+
 ![Screenshot](https://i.imgur.com/wHsa5gy.png)
